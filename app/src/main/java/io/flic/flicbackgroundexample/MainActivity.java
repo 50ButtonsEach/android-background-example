@@ -3,17 +3,12 @@ package io.flic.flicbackgroundexample;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import junit.framework.Assert;
-
+import io.flic.lib.FlicAppNotInstalledException;
 import io.flic.lib.FlicBroadcastReceiverFlags;
 import io.flic.lib.FlicButton;
-import io.flic.lib.FlicButtonCallback;
-import io.flic.lib.FlicButtonCallbackFlags;
 import io.flic.lib.FlicManager;
 import io.flic.lib.FlicManagerInitializedCallback;
 
@@ -35,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 					manager.initiateGrabButton(MainActivity.this);
 				}
 			});
-		} catch (AssertionError err) {
+		} catch (FlicAppNotInstalledException err) {
 			Toast.makeText(this, "Flic App is not installed", Toast.LENGTH_SHORT).show();
 		}
 	}
