@@ -1,3 +1,3 @@
 # android-background-example
 
-See https://flic.io/partners/developers/android-tutorial
+See https://partners.flic.io/partners/developers/android-tutorial
